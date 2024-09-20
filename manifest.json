@@ -2,7 +2,7 @@
   "name": "Cover Color Rule",
   "description": "Changes card cover color when moved to a specified list.",
   "icon": {
-    "url": "https://example.com/icon.png"  // Update with your icon URL
+    "url": "https://github.com/AweGuider/Trello-Cover-Color-Power-Up/blob/main/cool_1815073.png"  // Update with your icon URL
   },
   "author": "Your Name",
   "capabilities": [
@@ -13,7 +13,7 @@
   ],
   "connectors": {
     "iframe": {
-      "url": "https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>/index.html"
+      "url": "https://AweGuider.github.io/Trello-Cover-Color-Power-Up/index.html"
     }
   }
 }
