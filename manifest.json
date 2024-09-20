@@ -1,0 +1,19 @@
+{
+  "name": "Cover Color Rule",
+  "description": "Changes card cover color when moved to a specified list.",
+  "icon": {
+    "url": "https://example.com/icon.png"  // Update with your icon URL
+  },
+  "author": "Your Name",
+  "capabilities": [
+    "card-buttons",
+    "board-buttons",
+    "card-back-section",
+    "list-actions"
+  ],
+  "connectors": {
+    "iframe": {
+      "url": "https://<YOUR_GITHUB_USERNAME>.github.io/<YOUR_REPO_NAME>/index.html"
+    }
+  }
+}
