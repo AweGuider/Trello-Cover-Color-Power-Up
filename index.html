@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cover Color Rule</title>
+  <script src="https://p.trellocdn.com/power-up.min.js"></script>
+</head>
+<body>
+  <h1>Configure Your Rule</h1>
+  <label for="list-select">Select List:</label>
+  <select id="list-select">
+    <!-- Options will be populated dynamically using JavaScript -->
+  </select>
+  <br>
+  <label for="color-select">Select Cover Color:</label>
+  <select id="color-select">
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="orange">Orange</option>
+    <option value="red">Red</option>
+    <option value="purple">Purple</option>
+    <option value="blue">Blue</option>
+  </select>
+  <br><br>
+  <button id="save-btn">Save</button>
+
+  <script>
+    var t = window.TrelloPowerUp.iframe();
+
+    document.getElementById('save-btn').addEventListener('click', function() {
+      var selectedList = document.getElementById('list-select').value;
+      var selectedColor = document.getElementById('color-select').value;
+
+      t.set('board', 'shared', 'coverSettings', {
+        listId: selectedList,
+        color: selectedColor
+      }).then(function() {
+        t.closePopup();
+      });
+    });
+
+    t.lists('all').then(function(lists) {
+      var listSelect = document.getElementById('list-select');
+      lists.forEach(function(list) {
+        var option = document.createElement('option');
+        option.value = list.id;
+        option.text = list.name;
+        listSelect.add(option);
+      });
+    });
+  </script>
+</body>
+</html>
